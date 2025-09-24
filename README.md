@@ -26,3 +26,10 @@ Each row in this file corresponds to one unique delivery. Each column correspond
 - **total_busy_partners** : number of delivery partners attending to other tasks
 - **total_outstanding_orders** : total number of orders to be fulfilled at the moment
 - **estimated_store_to_consumer_driving_duration** : approximate travel time from restaurant to customer
+
+
+**Goal**: Predict delivery time (ETA) for an order.
+
+**Target**: actual_delivery_time - created_at (we’ll compute this, e.g., in minutes). actual_delivery_time is used only to build the target, not as a feature.
+
+**Features available**: market, order time, restaurant category, order protocol, basket stats (total_items, subtotal, num_distinct_items, min/max_item_price), supply–demand signals (total_onshift_*, total_busy_*, total_outstanding_orders), and travel estimate (estimated_store_to_consumer_driving_duration).
